@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OhMyFood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Saas/index.css">
 </head>
 <body>
-    
+    <header>
+        <nav>  
+            <h1 class="logo">ohmyfood</h1>  
+        </nav>
+        <div class="container-map">
+            <div class="search-map">
+                <i class="fa-solid fa-map-pin"></i>
+                <input type="search" name="map" value="Paris,Belleville"> 
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container-hero">
+            <div class="hero">
+                <h2 class="title">Réservez le menu qui vous convient </h2>
+                <p class="text">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+                <button class="commande">Explorer nos restaurants</button>
+            </div>
+        </div>
+        <div class="container-fonctionnement">
+            <div class="fonctionnement">
+                <h2 class="title">Fonctionnement</h2>
+                <div class="container-card">
+                    <div class="card">
+                        <div class="number"><span>1</span></div>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>Choisissez un restaurant</h3>
+                    </div>
+                    <div class="card">
+                        <div class="number"><span>1</span></div>
+                        <i class="fa-solid fa-list"></i>
+                        <h3>Composez votre menu</h3>
+                    </div>
+                    <div class="card">
+                        <div class="number"><span>1</span></div>
+                        <i class="fa-solid fa-store"></i>
+                        <h3>Dégustez au restaurant</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-restaurant">
+            <div class="restaurant">
+                <h2 class="title">Restaurant</h2>
+                <div class="card">
+                    <div class="new"><span class="subTitle">Nouveau</span></div>
+                    <img src="./Assets/restaurant_1.png" alt="restaurant de La palette du goût">
+                    <div class="container-item">
+                        <div class="item">  
+                            <h3 class="title">La palette du goût</h3>
+                            <h4 class="subTitle">Ménilmontant</h4>
+                        </div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/86667c26fe.js" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,206 @@
+$primaire : #9356DC;
+$Secondaire : #FF79DA;
+$Tertiare : #99E2D0;
+$background : #F6F6F6;
+$fontLogo : 'Shrikhand';
+$fontText : 'Roboto';
+
+@mixin center-both {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*,::after,::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.title{
+    font-family: $fontText;
+    font-size: 30px;
+    font-weight: 700;
+}
+.subTitle{
+    font-family: $fontText;
+    font-size: 16px;
+    font-weight: 500;
+}
+.text{
+    font-family: $fontText;
+    font-size: 18px;
+    font-weight: 300;
+}
+.commande{
+    font-family: $fontText;
+    border-radius: 9999px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    padding: 20px;
+    outline: none;
+    border: none;
+}
+nav{
+    height: 80px;
+    @include center-both;
+    .logo {
+        font-family: $fontLogo;
+        text-align: center;
+        font-size: 35px;
+        background-color: #fff;
+    }
+}
+.container-map{
+    width: 100%;
+    @include center-both;
+    height: 50px;
+    background-color: #EAEAEA;
+    color: #353535;
+    
+
+    .search-map{
+        @include center-both;
+        gap: 15px;
+        i{
+            font-size: 20px;
+        }
+        input{
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            width: 60%;
+            outline: none;
+        }
+    }
+}
+.container-hero{
+    background: $background;
+    @include center-both;
+    width: 100%;
+    height: 50vh;
+        .hero{
+            width: 80%;
+            text-align: center;
+            @include center-both;
+            flex-direction: column;
+            gap: 18px;
+            button{
+                width: 100%;
+                max-width: 250px;
+            }
+   }
+
+}
+
+.container-fonctionnement{
+    @include center-both;
+    background: #fff;
+    width: 100%;
+    flex-direction: column;
+    padding: 35px 0;
+    .fonctionnement{
+        @include center-both;
+        flex-direction: column;
+        gap: 20px;
+        width: 80%;
+        .title{
+            align-self: start;
+            margin-bottom: 15px;
+        }
+        .container-card{
+            @include center-both;
+            flex-direction: column;
+            gap: 20px;
+            .card{
+                font-family: $fontText;
+                width: 100%;
+                border-radius: 25px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                @include center-both;
+                justify-content:start;
+                gap: 10px;
+                transform: translatey(-10px);
+                position: relative;
+                padding: 35px;
+                background-color: #F6F6F6;
+                i{
+                    font-size: 18px;
+                    color: #7E7E7E;
+                    margin-right: 10px;
+                }
+                .number{
+                    position: absolute;
+                    left: -15px;
+                    background: $primaire;
+                    padding: 10px;
+                    clip-path: circle();
+                    color: #fff;
+    
+                }
+            }
+        }
+        
+    }
+}
+
+.container-restaurant{
+    width: 100%;
+    @include center-both;
+    flex-direction: column;
+    background-color: $background;
+    padding: 35px 0;
+    .title{
+        align-self: start;
+    }
+    .restaurant{
+        @include center-both;
+        gap: 20px;
+        width: 80%;
+        flex-direction: column;
+        .card{
+            font-family: $fontText;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            overflow: hidden;
+            position: relative;
+            img{
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                object-position: center;
+            }
+            .container-item{
+                padding: 10px 30px;
+                padding-top: 5px;
+                @include center-both;
+                justify-content: space-between;
+                .title{
+                    font-size: 20px;
+                }
+                .subTitle{
+                    font-size: 16px;
+                    font-weight: 300;
+                }
+                i{
+                    font-size: 20px;
+                }
+            }
+        }
+        .new{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #99E2D0;
+            padding: 10px;
+            border-radius: 6px;
+            span{
+                color: #008766;
+            }
+        }
+    }
+}
