@@ -1,0 +1,110 @@
+@import "mixin";
+
+*,::after,::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.title{
+    font-family: $fontText;
+    font-size: 30px;
+    font-weight: 700;
+}
+.subTitle{
+    font-family: $fontText;
+    font-size: 16px;
+    font-weight: 500;
+}
+.text{
+    font-family: $fontText;
+    font-size: 18px;
+    font-weight: 300;
+}
+.commande{
+    font-family: $fontText;
+    border-radius: 9999px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(to top, #9356DC, #FF79DA);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+    padding: 20px;
+    outline: none;
+    border: none;
+    transition: 0.20s linear;
+    cursor: pointer;
+}
+.commande:hover{
+    box-shadow: rgba(0, 0, 0, 0.30) 0px 0px 10px;
+    filter: brightness(1.15);
+}
+.logo {
+    font-family: $fontLogo;
+    text-align: center;
+    font-size: 35px;
+}
+.heart {
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+.heart linearGradient{
+    display: none;
+}
+.heart:hover linearGradient{
+    display: block;
+}
+.heart:hover path {
+    stroke-width: 0;
+}
+
+
+
+footer {
+    background: #353535;
+    padding: 40px 40px 15px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 25px;
+    .logo {
+      font-size: 18px;
+      text-align: start;
+      color: #fff;
+      font-weight: 300;
+    }
+    ul {
+      color: #fff;
+      font-size: 15px;
+      font-family: $fontText;
+      list-style-type: none;
+      width: 100%;
+      li {
+        @include center-both();
+        margin-bottom: 10px;
+        justify-content: start;
+        i {
+          font-size: 13px;
+        }
+        h4 {
+          font-weight: 400;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+@media screen and (min-width: 1024px) {
+    footer{
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        ul{
+            @include center-both();
+            flex-direction: row;
+            gap: 10px;
+            width: auto;
+            li:nth-child(2),li:nth-child(4){
+                margin-right: 50px;
+            }
+        }
+    }
+}
