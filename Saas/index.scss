@@ -45,6 +45,8 @@
 nav {
   height: 80px;
   @include center-both;
+  width: 100%;
+  background: #fff;
 }
 .container-map {
   width: 100%;
