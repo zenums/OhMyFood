@@ -1,7 +1,47 @@
-@import "variable";
-@import "mixin";
-@import "global";
+@import "./Saas_Fichier/variable.scss";
+@import "./Saas_Fichier/mixin";
+@import "./Saas_Fichier/global";
+@import "./Restaurant.scss";
 
+
+@keyframes Loader-animation {
+  0% {
+    opacity: 0;
+  }
+  60%{
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin{
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.isloading{
+  animation: Loader-animation forwards;
+  animation-duration: 4s;
+}
+.loader{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 4px solid $primaire;
+    border-left-color: transparent;
+    width: 36px;
+    height: 36px;
+    animation: spin 1s linear infinite;
+    border-radius: 50%;
+}
 nav {
   height: 80px;
   @include center-both;
