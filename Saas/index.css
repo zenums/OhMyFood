@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .title {
   font-family: "Roboto";
   font-size: 30px;
@@ -128,6 +132,10 @@ footer ul li h4 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .title {
   font-family: "Roboto";
   font-size: 30px;
@@ -246,8 +254,12 @@ footer ul li h4 {
     margin-right: 50px;
   }
 }
-nav i {
+nav a {
   justify-self: start;
+  color: #000;
+}
+nav a i {
+  font-size: 20px;
 }
 
 .header {
@@ -262,7 +274,7 @@ nav i {
 }
 
 .main {
-  background: #fff;
+  background: #F6F6F6;
   border-radius: 40px 40px 0px 0;
   transform: translateY(-50px);
   z-index: 10;
@@ -272,7 +284,7 @@ nav i {
   justify-content: center;
   align-items: center;
   justify-content: space-between !important;
-  padding: 30px;
+  padding: 30px 24px;
 }
 .main .container-title-page h1 {
   font-family: "Shrikhand";
@@ -283,6 +295,134 @@ nav i {
   font-size: 25px;
 }
 
+.container-restaurant-item {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: normal !important;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.container-restaurant-item .container-carte .subTitle {
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.container-restaurant-item .container-carte .subTitle::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #99E2D0;
+  margin-top: 5px;
+}
+.container-restaurant-item .container-carte .carte {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-restaurant-item .container-carte .carte .card {
+  cursor: pointer;
+  font-family: "Roboto";
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-restaurant-item .container-carte .carte .card .card-left {
+  padding: 15px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.25s;
+}
+.container-restaurant-item .container-carte .carte .card .card-left .title-card {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+.container-restaurant-item .container-carte .carte .card .card-left .title-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+.container-restaurant-item .container-carte .carte .card .card-left .title-card h4 {
+  font-size: 15px;
+  font-weight: 300;
+}
+.container-restaurant-item .container-carte .carte .card .card-left .price {
+  font-size: 17px;
+  font-weight: 700;
+  align-self: flex-end;
+  padding-left: 10px;
+}
+.container-restaurant-item .container-carte .carte .card .card-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #99E2D0;
+  width: 0%;
+  height: 100%;
+  transition: all 0.25s;
+}
+.container-restaurant-item .container-carte .carte .card .card-right i {
+  color: #fff;
+  font-size: 22px;
+}
+.container-restaurant-item .container-carte .carte .card:hover .card-right {
+  width: 20%;
+}
+.container-restaurant-item .container-carte .carte .card:hover .card-left {
+  width: 80%;
+}
+.container-restaurant-item .commande {
+  width: 60%;
+  align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main .container-title-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center !important;
+    gap: 15px;
+  }
+  .main .container-title-page h1 {
+    font-family: "Shrikhand";
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .main .container-title-page i {
+    font-size: 25px;
+  }
+  .main .container-restaurant-item {
+    width: 60%;
+  }
+  .card:hover .card-right {
+    width: 10% !important;
+  }
+  .card:hover .card-left {
+    width: 90% !important;
+  }
+}
 @keyframes Loader-animation {
   0% {
     opacity: 0;
@@ -471,6 +611,7 @@ nav {
   gap: 15px;
 }
 .container-restaurant .restaurant .container-card .card {
+  color: #000;
   font-family: "Roboto";
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
