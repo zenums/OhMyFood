@@ -2,6 +2,31 @@
 @import "./Saas_Fichier/mixin";
 @import "./Saas_Fichier/global";
 
+@keyframes apparition{
+    0%{
+        opacity: 0;
+        transform: translatey(20px);
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0);
+    }
+}
+.anim{
+    opacity: 0;
+    transform: translatey(20px);
+    animation: apparition 1s forwards;
+}
+.bloc1{
+    animation-delay: 0.5s;
+}
+.bloc2{
+    animation-delay: 1s;
+}
+.bloc3{
+    animation-delay: 1.5s;
+}
+
 nav{
     a{
         justify-self: start;
@@ -25,8 +50,8 @@ nav{
 .main{
     background: $background;
     border-radius: 40px 40px 0px 0;
-    transform: translateY(-50px);
     z-index: 10;
+    transform: translateY(-50px);
     .container-title-page{
         @include center-both();
         justify-content: space-between!important;
@@ -50,7 +75,7 @@ nav{
     flex-direction: column;
     align-items: normal!important;
     gap: 30px;
-    margin-bottom: 30px;
+    padding-bottom: 30px;
 
     .container-carte{
         .subTitle{
