@@ -29,7 +29,8 @@
 
 nav{
     a{
-        justify-self: start;
+        position: absolute;
+        left: 20px;
         color: #000;
         i{
             font-size: 20px;
@@ -51,10 +52,12 @@ nav{
     background: $background;
     border-radius: 40px 40px 0px 0;
     z-index: 10;
-    transform: translateY(-50px);
+    margin-top: -50px;
+    z-index: 10;
+    position: relative;
     .container-title-page{
         @include center-both();
-        justify-content: space-between!important;
+        gap: 20px;
         padding: 30px 24px;
         h1{
             font-family: $fontLogo;
@@ -113,19 +116,21 @@ nav{
                     justify-content: space-between;
                     transition: all 0.25s;
                     .title-card{
-                        white-space: nowrap;
-                        overflow: hidden; 
-                        text-overflow: ellipsis!important;
-                
+                        overflow: hidden;        
                         h3{
                           font-size: 18px;
-                          font-weight: 600;  
+                          font-weight: 600;
+                          text-overflow: ellipsis!important;
+                          white-space: nowrap;
+                          overflow: hidden;
                        
                         }
                         h4{
                             font-size: 15px;
                             font-weight: 300;
-                            
+                            text-overflow: ellipsis!important;
+                            white-space: nowrap; 
+                            overflow: hidden;
                         }
                     }
                     .price{
@@ -166,12 +171,9 @@ nav{
 @media screen and (min-width:1024px) {
     .main{
         width: 80%;
-        margin: 0 auto;
+        margin: 0px auto;
+        margin-top: -50px;
         .container-title-page{
-            @include center-both();
-            justify-content: center!important;
-            gap: 15px;
-
             h1{
                 font-family: $fontLogo;
                 font-size: 28px;

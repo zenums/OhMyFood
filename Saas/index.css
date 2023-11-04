@@ -67,6 +67,7 @@ a {
   display: none;
 }
 .icon-heart:hover .fa-solid {
+  transform: scale(1.15);
   display: block;
   -webkit-background-clip: text;
   color: transparent;
@@ -103,6 +104,10 @@ footer ul li {
 }
 footer ul li i {
   font-size: 13px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 footer ul li h4 {
   font-weight: 400;
@@ -195,6 +200,7 @@ a {
   display: none;
 }
 .icon-heart:hover .fa-solid {
+  transform: scale(1.15);
   display: block;
   -webkit-background-clip: text;
   color: transparent;
@@ -231,6 +237,10 @@ footer ul li {
 }
 footer ul li i {
   font-size: 13px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 footer ul li h4 {
   font-weight: 400;
@@ -283,7 +293,8 @@ footer ul li h4 {
 }
 
 nav a {
-  justify-self: start;
+  position: absolute;
+  left: 20px;
   color: #000;
 }
 nav a i {
@@ -305,13 +316,15 @@ nav a i {
   background: #F6F6F6;
   border-radius: 40px 40px 0px 0;
   z-index: 10;
-  transform: translateY(-50px);
+  margin-top: -50px;
+  z-index: 10;
+  position: relative;
 }
 .main .container-title-page {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between !important;
+  gap: 20px;
   padding: 30px 24px;
 }
 .main .container-title-page h1 {
@@ -379,17 +392,21 @@ nav a i {
   transition: all 0.25s;
 }
 .container-restaurant-item .container-carte .carte .card .card-left .title-card {
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis !important;
 }
 .container-restaurant-item .container-carte .carte .card .card-left .title-card h3 {
   font-size: 18px;
   font-weight: 600;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .container-restaurant-item .container-carte .carte .card .card-left .title-card h4 {
   font-size: 15px;
   font-weight: 300;
+  text-overflow: ellipsis !important;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .container-restaurant-item .container-carte .carte .card .card-left .price {
   font-size: 17px;
@@ -424,14 +441,8 @@ nav a i {
 @media screen and (min-width: 1024px) {
   .main {
     width: 80%;
-    margin: 0 auto;
-  }
-  .main .container-title-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center !important;
-    gap: 15px;
+    margin: 0px auto;
+    margin-top: -50px;
   }
   .main .container-title-page h1 {
     font-family: "Shrikhand";

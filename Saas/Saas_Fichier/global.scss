@@ -1,5 +1,4 @@
 @import "mixin";
-
 *,::after,::before{
     box-sizing: border-box;
     padding: 0;
@@ -60,10 +59,11 @@ a{
         display: none;
     }
     &:hover .fa-solid{
+        transform: scale(1.15);
         display: block;
         -webkit-background-clip: text;
         color: transparent;
-        background-image: linear-gradient(193deg, $primaire -11.44%, $Secondaire 123.93%);; 
+        background-image: linear-gradient(193deg, $primaire -11.44%, $Secondaire 123.93%);
     }
 }   
 
@@ -91,12 +91,16 @@ footer {
       font-family: $fontText;
       list-style-type: none;
       width: 100%;
-      li {
+      li{
         @include center-both();
         margin-bottom: 10px;
         justify-content: start;
         i {
           font-size: 13px;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
         }
         h4 {
           font-weight: 400;
