@@ -13,8 +13,6 @@
     }
 }
 .anim{
-    opacity: 0;
-    transform: translatey(20px);
     animation: apparition 1s forwards;
 }
 .bloc1{
@@ -48,6 +46,7 @@ nav{
         height: 100%;
     }
 }
+
 .main{
     background: $background;
     border-radius: 40px 40px 0px 0;
@@ -108,7 +107,8 @@ nav{
                 background: #fff;
                 width: 100%;
                 height: 70px;
-                @include center-both();justify-content: space-between;
+                @include center-both();
+                justify-content: space-between;
                 .card-left{
                     padding: 15px 20px;
                     width: 100%;
